@@ -8,6 +8,16 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const floatingButtons = document.querySelector(".floatingbuttons");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > window.innerHeight) {
+    floatingButtons.classList.add("show");
+  } else {
+    floatingButtons.classList.remove("show");
+  }
+});
+
 /* ================= HERO SLIDER ================= */
 
 const slides = document.querySelectorAll(".slide");
