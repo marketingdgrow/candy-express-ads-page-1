@@ -90,6 +90,15 @@ closeMenu?.addEventListener("click", () => {
 });
 
 showSlide(index);
+// auto close menu when clicking a menu link
+
+const menuLinks = document.querySelectorAll("#menuPanel a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuPanel?.classList.remove("open");
+  });
+});
 
 /* ================= SERVICE SECTION ANIMATION ================= */
 
