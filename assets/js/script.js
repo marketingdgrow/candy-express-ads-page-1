@@ -273,3 +273,55 @@ if (testimonialsSlides.length) {
 /* init */
 
 showTestimonialsSlide(testimonialsIndex);
+
+const form = document.querySelector(".contact-form-box");
+const btn = document.querySelector(".contact-form-submit");
+
+if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    btn.innerText = "Submitting...";
+    btn.disabled = true;
+
+    const data = {
+      name: document.getElementById("name").value,
+      city: document.getElementById("city").value,
+      venue: document.getElementById("venue").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      date: document.getElementById("date").value,
+      source: document.getElementById("source").value,
+      guests: document.getElementById("guests").value,
+      budget: document.getElementById("budgets").value,
+      message: document.getElementById("message").value,
+    };
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwq0LhtkhHwpzntkPir8GKe3I47-QKlZq_PmyOOrtVbrKUzPcWhL931wpNFgeokMdqRKg/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        },
+      );
+
+      btn.innerText = "Submitted ✓";
+
+      form.reset();
+
+      setTimeout(() => {
+        btn.innerText = "Submit →";
+        btn.disabled = false;
+      }, 3000);
+    } catch (err) {
+      console.error(err);
+      btn.innerText = "Error";
+      btn.disabled = false;
+    }
+  });
+}
