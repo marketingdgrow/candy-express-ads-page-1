@@ -273,7 +273,6 @@ if (testimonialsSlides.length) {
 /* init */
 
 showTestimonialsSlide(testimonialsIndex);
-
 const form = document.querySelector(".contact-form-box");
 const btn = document.querySelector(".contact-form-submit");
 
@@ -311,13 +310,12 @@ if (form) {
       );
 
       btn.innerText = "Submitted ✓";
-
       form.reset();
 
+      // reload page after 2 seconds
       setTimeout(() => {
-        btn.innerText = "Submit →";
-        btn.disabled = false;
-      }, 3000);
+        location.reload();
+      }, 2000);
     } catch (err) {
       console.error(err);
       btn.innerText = "Error";
@@ -325,3 +323,18 @@ if (form) {
     }
   });
 }
+const galaryImages = document.querySelectorAll(".galarysection-item img");
+const galaryLightbox = document.querySelector(".galarysection-lightbox");
+const galaryLightboxImg = document.querySelector(".galarysection-lightbox-img");
+const galaryClose = document.querySelector(".galarysection-close");
+
+galaryImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    galaryLightbox.style.display = "flex";
+    galaryLightboxImg.src = img.src;
+  });
+});
+
+galaryClose.addEventListener("click", () => {
+  galaryLightbox.style.display = "none";
+});
