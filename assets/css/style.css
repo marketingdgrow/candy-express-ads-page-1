@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #f3f3f3;
   color: white;
