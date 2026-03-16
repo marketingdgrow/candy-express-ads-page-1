@@ -33,6 +33,26 @@ header {
   padding: 30px 60px;
   z-index: 10;
 }
+/* header fixed state */
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  padding: 20px;
+  animation: headerSlide 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes headerSlide {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
 nav {
   display: flex;
@@ -145,6 +165,10 @@ nav a {
   transition: 0.6s;
   z-index: 20;
 }
+.menu-panel a {
+  color: #fff;
+  text-decoration: none;
+}
 .menu-panel .close {
   cursor: pointer;
 }
@@ -203,6 +227,10 @@ nav a {
   top: 50%;
   right: 30px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
 }
 
 /* DOT NAV */

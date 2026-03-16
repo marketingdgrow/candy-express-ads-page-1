@@ -1,3 +1,13 @@
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > window.innerHeight) {
+    header.classList.add("header-fixed");
+  } else {
+    header.classList.remove("header-fixed");
+  }
+});
+
 /* ================= HERO SLIDER ================= */
 
 const slides = document.querySelectorAll(".slide");
