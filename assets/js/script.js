@@ -367,3 +367,19 @@ galaryImages.forEach((img) => {
 galaryClose.addEventListener("click", () => {
   galaryLightbox.style.display = "none";
 });
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item, index) => {
+  const btn = item.querySelector(".faq-question");
+
+  btn.addEventListener("click", () => {
+    // Close all
+    faqItems.forEach((i) => i.classList.remove("active"));
+
+    // Open clicked
+    item.classList.add("active");
+  });
+});
+
+// Default first open
+faqItems[0].classList.add("active");
