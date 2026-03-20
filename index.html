@@ -49,7 +49,7 @@
         <i class="fa-solid fa-xmark"></i>
       </div>
 
-      <h2 class="info-title">Mystic Studios</h2>
+      <h2 class="info-title">Candy Express Photography</h2>
 
       <p class="info-about">
         We are a reputable photography company. We specialize in a wide range of
@@ -59,7 +59,10 @@
       </p>
 
       <div class="info-address">
-        <h3><i class="fa-solid fa-location-dot"></i> Chennai</h3>
+        <h3>
+          <i class="fa-solid fa-location-dot"></i>CEP MEDIA PRIVATE LIMITED -
+          Corporate Office
+        </h3>
         <p>
           No. 191,192,193, 2nd Floor, Raahat Plaza,<br />
           NSK Salai Rd, Arcot Road, Opposite Vijaya Hospital,<br />
@@ -68,9 +71,11 @@
 
         <h3><i class="fa-solid fa-location-dot"></i> Trichy</h3>
         <p>
-          Sterling Biz Park, Sastri Road,<br />
-          Thillai Nagar, Fort Station Road,<br />
-          Trichy - 620018.
+          1St Floor, <br />
+          Vignesh Plaza,<br />
+          No.5, 1st Cross Rd,<br />
+          Thillai Nagar, Tiruchirappalli,<br />
+          Tamil Nadu 620018
         </p>
 
         <h3><i class="fa-solid fa-location-dot"></i> Salem</h3>
@@ -172,9 +177,8 @@
           <div class="hero-review">
             <div class="star-hero">
               <div class="star-container">
-                <div class="inner-con">5-Star Rated</div>
-                <div class="inner-con">14+ Years Experience</div>
-                <div class="inner-con">124+ South Indian Weddings</div>
+                <div class="inner-con">15+ Years Experience</div>
+                <div class="inner-con">5000+ South Indian Weddings</div>
               </div>
               <h3>Tamil · Christian · Muslim · Destination</h3>
             </div>
@@ -393,7 +397,8 @@
     </div>
     <!--  -->
     <!--  -->
-    <div class="about-section">
+
+    <div class="about-section" id="about">
       <div class="about-left">
         <div class="about-stats">
           <div class="stats-item">
@@ -475,6 +480,19 @@
         </div>
         <div class="about-inner2"></div>
       </div>
+
+      <div class="about-overlay-img">
+        <img
+          src="./assets/images/overlayimg/img (1).png"
+          alt=""
+          class="about-oerlay1"
+        />
+        <img
+          src="./assets/images/overlayimg/img (1).png"
+          alt=""
+          class="about-oerlay2"
+        />
+      </div>
     </div>
     <section class="profilesection">
       <h2 class="profile-title">Our studio is led by Kavin Suresh</h2>
@@ -520,7 +538,8 @@
       ></a>
     </section>
     <!--  -->
-    <section class="service-section" id="about">
+
+    <section class="service-section">
       <div class="service-section-container">
         <h2 class="service-section-heading">
           One Wedding <br />
@@ -610,6 +629,18 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="service-overlay-images">
+        <img
+          class="service-overlayimg1"
+          src="./assets/images/overlayimg/img (4).png"
+          alt=""
+        />
+        <img
+          class="service-overlayimg2"
+          src="./assets/images/overlayimg/img (4).png"
+          alt=""
+        />
       </div>
     </section>
     <!--  -->
@@ -805,7 +836,21 @@
       </div>
     </section> -->
     <!--  -->
+
+    <script async src="//www.instagram.com/embed.js"></script>
     <section class="whychooseus">
+      <div class="why-overlay-images">
+        <img
+          class="why-overlay-img1"
+          src="./assets/images/overlayimg/img (5).png"
+          alt=""
+        />
+        <img
+          class="why-overlay-img2"
+          src="./assets/images/overlayimg/img (6).png"
+          alt=""
+        />
+      </div>
       <h2 class="whychooseus-title">Why Choose Us?</h2>
 
       <p class="whychooseus-desc">
@@ -870,7 +915,8 @@
         </div>
       </div>
     </section>
-    <h2 class="service-section-heading">
+    <!--  -->
+    <h2 class="service-section-heading" id="testimonial">
       The Thank You <br />
       Messages That Keep Us Going
     </h2>
@@ -881,7 +927,7 @@
       weddings. Honest words from people who trusted us with the most important
       day of their lives.
     </p>
-    <div class="testimonials-slider" id="testimonial">
+    <div class="testimonials-slider">
       <!-- 1 -->
       <div class="testimonials-slide active">
         <div class="testimonials-image">
@@ -1092,6 +1138,10 @@
       </div>
     </div>
 
+    <!--  -->
+
+    <!--  -->
+
     <section class="contact-form-section" id="contact">
       <div class="contact-form-container">
         <h2 class="contact-form-title">
@@ -1102,82 +1152,125 @@
         <p class="contact-form-subtitle">Get in Touch</p>
 
         <form class="contact-form-box">
-          <div class="contact-form-grid">
-            <div class="contact-form-field">
-              <label>Bride/Groom Name *</label>
-              <input type="text" id="name" required />
-            </div>
+          <div class="contact-form-field">
+            <label>Name *</label>
+            <input type="text" id="name" required />
+          </div>
 
-            <div class="contact-form-field">
-              <label>Venue City *</label>
-              <input type="text" id="city" required />
-            </div>
+          <div class="contact-form-field">
+            <label>Email Id *</label>
+            <input type="email" id="email" required />
+          </div>
 
-            <div class="contact-form-field">
-              <label>Wedding Venue/Mandapam Name *</label>
-              <input type="text" id="venue" required />
-            </div>
+          <div class="contact-form-field">
+            <label>Contact Number *</label>
+            <input type="text" id="phone" required />
+          </div>
 
-            <div class="contact-form-field">
-              <label>Email *</label>
-              <input type="email" id="email" />
-            </div>
+          <div class="contact-form-field">
+            <label>Event Type</label>
 
-            <div class="contact-form-field">
-              <label>Contact No *</label>
-              <div class="contact-form-phone">
-                <select>
-                  <option>+91</option>
-                </select>
-                <input
-                  type="text"
-                  required
-                  id="phone"
-                  placeholder=" 90427 73337"
-                />
-              </div>
-            </div>
+            <div class="event-options">
+              <label
+                ><input type="radio" name="event" value="Engagement" />
+                Engagement</label
+              >
+              <label
+                ><input type="radio" name="event" value="Wedding" />
+                Wedding</label
+              >
+              <label
+                ><input type="radio" name="event" value="Reception" />
+                Reception</label
+              >
 
-            <div class="contact-form-field">
-              <label>Date of the event *</label>
-              <input type="date" id="date" required />
-            </div>
+              <label
+                ><input type="radio" name="event" value="Reception & Wedding" />
+                Reception & Wedding</label
+              >
+              <label
+                ><input type="radio" name="event" value="Brahmin Wedding" />
+                Brahmin Type Wedding</label
+              >
+              <label
+                ><input type="radio" name="event" value="Telugu Wedding" />
+                Telugu Type Wedding</label
+              >
 
-            <div class="contact-form-field">
-              <label>How did you hear about us ? *</label>
-              <select id="source">
-                <option>Select</option>
-                <option>Instagram</option>
-                <option>FaceBook</option>
-                <option>YouTube</option>
-                <option>Ads</option>
-              </select>
-            </div>
+              <label
+                ><input type="radio" name="event" value="Christian Wedding" />
+                Christian Type Wedding</label
+              >
+              <label
+                ><input type="radio" name="event" value="Muslim Wedding" />
+                Muslim Type Wedding</label
+              >
+              <label
+                ><input type="radio" name="event" value="Pre/Post Wedding" />
+                Pre-Post Wedding Shoot</label
+              >
 
-            <div class="contact-form-field">
-              <label>How many no of guest are expected for the event? *</label>
-              <input type="number" id="guests" />
+              <label
+                ><input type="radio" name="event" value="Corporate" /> Corporate
+                Event Photography</label
+              >
+              <label
+                ><input type="radio" name="event" value="Birthday" /> Birthday
+                Event</label
+              >
+              <label
+                ><input type="radio" name="event" value="Baby Shower" /> Baby
+                Shower</label
+              >
+
+              <label
+                ><input type="radio" name="event" value="Puberty" />
+                Puberty</label
+              >
+              <label
+                ><input type="radio" name="event" value="House Warming" /> House
+                Warming</label
+              >
+              <label
+                ><input type="radio" name="event" value="Sashtiapthapurthi" />
+                Sashtiapthapurthi</label
+              >
+
+              <label
+                ><input type="radio" name="event" value="Interior" /> Interior
+                Infra Photography</label
+              >
+              <label
+                ><input type="radio" name="event" value="Construction" />
+                Construction Photography</label
+              >
+              <label
+                ><input type="radio" name="event" value="Industrial" />
+                Industrial Photography</label
+              >
             </div>
           </div>
 
-          <div class="contact-form-field contact-form-full">
-            <label>
-              What is the budget/investment you've planned for your wedding
-              photography? *
-            </label>
-            <select id="budgets">
-              <option>normal</option>
-              <option>Premium</option>
-            </select>
+          <div class="contact-form-field">
+            <label>Event Date *</label>
+            <input type="date" id="date" required />
           </div>
 
-          <div class="contact-form-field contact-form-full">
-            <label>We love to hear more about you and your wedding... *</label>
-            <textarea rows="5" id="message"></textarea>
+          <div class="contact-form-field">
+            <label>Event Location *</label>
+            <input type="text" id="location" required />
           </div>
 
-          <button type="submit" class="contact-form-submit">Submit →</button>
+          <div class="contact-form-field">
+            <label>More Details</label>
+            <textarea id="message"></textarea>
+          </div>
+
+          <button type="submit" class="contact-form-submit">Submit</button>
         </form>
+      </div>
+      <div class="contact-overlay-images">
+        <img src="./assets/images/overlayimg/img (12).png" alt="" />
       </div>
     </section>
 
@@ -1187,13 +1280,6 @@
         <h2 class="galarysection-title">Our Gallery</h2>
 
         <div class="galarysection-grid">
-          <div class="galarysection-item">
-            <img
-              src="./assets/images/1-VERTICAL/001 DSC00887 CANDY NO WATER copy 2.jpg"
-              alt=""
-            />
-          </div>
-
           <div class="galarysection-item">
             <img src="./assets/images/1-VERTICAL/009.jpg" alt="" />
           </div>
@@ -1292,6 +1378,18 @@
               alt=""
             />
           </div>
+          <div class="galarysection-item">
+            <img
+              src="./assets/images/1-VERTICAL/DSC06233 CANDY NO WATER.jpg"
+              alt=""
+            />
+          </div>
+          <div class="galarysection-item">
+            <img
+              src="./assets/images/1-VERTICAL/DSC08595 WORKING copy 2 ok.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
 
@@ -1310,7 +1408,7 @@
             Everything you need to know before choosing your wedding
             photographer — pricing, style, timelines, and what to expect.
           </p>
-          <img src="./assets/images/img (4).jpeg" alt="" />
+          <img src="./assets/images/3-horizontal/candy-4.jpg" alt="" />
         </div>
 
         <!-- RIGHT SIDE (FAQ) -->
@@ -1436,9 +1534,10 @@
         <!-- LEFT -->
         <div class="footersection-left">
           <img
-            src="./assets/images/drive-download-20260316T042416Z-1-001/15 YEARS LOGO.png"
-            class="footersection-logo"
+            src="./assets/images/footer.png"
+            class="footersection-logo footerlogomain"
           />
+
           <h3 class="footersection-title">FOLLOW US</h3>
 
           <p class="footersection-email">
@@ -1487,7 +1586,7 @@
         <!-- CENTER LOGO -->
         <div class="footersection-center">
           <img
-            src="./assets/images/drive-download-20260316T042416Z-1-001/candy express logo png.png"
+            src="./assets/images/drive-download-20260316T042416Z-1-001/15 YEARS LOGO.png"
             class="footersection-logo"
           />
         </div>
@@ -1520,7 +1619,7 @@
 
       <div class="footersection-address">
         <div class="footer-address-box">
-          <h4>Chennai</h4>
+          <h4>CEP MEDIA PRIVATE LIMITED - Corporate Office</h4>
 
           <p>
             No. 191,192,193, 2nd Floor, Raahat Plaza,<br />
@@ -1534,10 +1633,10 @@
           <h4>Trichy</h4>
 
           <p>
-            Sterling Biz Park, Sastri Road,<br />
-            Thillai Nagar,<br />
-            Fort Station Road,<br />
-            Trichy - 620018
+            1St Floor,<br />
+            Vignesh Plaza, <br />No.5, 1st Cross Rd, <br />Thillai Nagar,
+            Tiruchirappalli,<br />
+            Tamil Nadu 620018 <br />
           </p>
         </div>
 
@@ -1576,5 +1675,6 @@
       </a>
     </div>
     <script src="./assets/js/script.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
   </body>
 </html>
