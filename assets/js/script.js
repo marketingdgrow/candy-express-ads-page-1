@@ -190,10 +190,9 @@ if (track && youtubeCards.length) {
 }
 
 /* ================= STATS SECTION ================= */
-
-const statsSection = document.querySelector(".stats-section");
-const numbers = document.querySelectorAll(".stats-number");
-const items = document.querySelectorAll(".stats-item");
+const aboutSection = document.querySelector(".about-section");
+const numbers = document.querySelectorAll(".about-section .stats-number");
+const items = document.querySelectorAll(".about-section .stats-item");
 
 let started = false;
 
@@ -228,7 +227,7 @@ function startCounter() {
   });
 }
 
-const statsObserver = new IntersectionObserver(
+const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -239,8 +238,8 @@ const statsObserver = new IntersectionObserver(
   { threshold: 0.4 },
 );
 
-if (statsSection) {
-  statsObserver.observe(statsSection);
+if (aboutSection) {
+  observer.observe(aboutSection);
 }
 /* ================= TESTIMONIAL SLIDER ================= */
 
@@ -302,6 +301,7 @@ if (testimonialsSlides.length) {
 /* init */
 
 showTestimonialsSlide(testimonialsIndex);
+
 const form = document.querySelector(".contact-form-box");
 const btn = document.querySelector(".contact-form-submit");
 
