@@ -192,18 +192,19 @@ nav a {
   position: relative;
 }
 .hero h1 {
-  font-size: 46px;
-  line-height: 60px;
+  font-size: 32px;
+  line-height: 30px;
   font-weight: 300;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 .hero p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
+  font-size: 22px;
   font-style: italic;
   width: 60%;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 .slide {
   position: absolute;
@@ -217,6 +218,9 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.hero-text {
+  margin-bottom: 160px;
 }
 .hero-review h3 {
   font-weight: 600;
@@ -2019,6 +2023,9 @@ circle {
   }
   .contact-overlay-images img {
     opacity: 0.1;
+  }
+  .hero-text {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 600px) {
