@@ -1999,6 +1999,7 @@ circle {
   bottom: 0px;
   z-index: -1;
 }
+
 @media (max-width: 992px) {
   .about-overlay-img {
     display: flex;
