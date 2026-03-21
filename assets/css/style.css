@@ -1406,10 +1406,11 @@ circle {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
   padding: 40px 20px;
   border-top: 1px solid #ddd;
+  text-align: center;
 }
 
 .footer-address-box h4 {
