@@ -2013,6 +2013,12 @@ circle {
   .service-overlay-images img {
     width: 80px;
   }
+  .why-overlay-img1 {
+    width: 80px;
+  }
+  .contact-overlay-images img {
+    opacity: 0.1;
+  }
 }
 @media (max-width: 600px) {
 }
