@@ -376,3 +376,123 @@ faqItems.forEach((item, index) => {
 
 // Default first open
 faqItems[0].classList.add("active");
+/* ================= HERO SLIDER (CLEAN VERSION) ================= */
+
+const heroSlides = document.querySelectorAll(".hero-slide");
+const heroSliderWrapper = document.querySelector(".hero-slider");
+const heroNextBtn = document.querySelector(".next");
+const heroPrevBtn = document.querySelector(".prev");
+
+if (heroSlides.length && heroSliderWrapper) {
+  let heroCurrentIndex = 0;
+  let heroAutoSlideInterval;
+
+  function updateHeroSlide(slideIndex) {
+    heroSlides.forEach((slide) => slide.classList.remove("active"));
+
+    if (heroSlides[slideIndex]) {
+      heroSlides[slideIndex].classList.add("active");
+    }
+
+    heroSliderWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  function goToNextHeroSlide() {
+    heroCurrentIndex = (heroCurrentIndex + 1) % heroSlides.length;
+    updateHeroSlide(heroCurrentIndex);
+  }
+
+  function goToPrevHeroSlide() {
+    heroCurrentIndex =
+      (heroCurrentIndex - 1 + heroSlides.length) % heroSlides.length;
+    updateHeroSlide(heroCurrentIndex);
+  }
+
+  function startHeroAutoSlide() {
+    heroAutoSlideInterval = setInterval(goToNextHeroSlide, 5000);
+  }
+
+  function stopHeroAutoSlide() {
+    clearInterval(heroAutoSlideInterval);
+  }
+
+  /* Button Events */
+  heroNextBtn?.addEventListener("click", () => {
+    stopHeroAutoSlide();
+    goToNextHeroSlide();
+    startHeroAutoSlide();
+  });
+
+  heroPrevBtn?.addEventListener("click", () => {
+    stopHeroAutoSlide();
+    goToPrevHeroSlide();
+    startHeroAutoSlide();
+  });
+
+  /* Init */
+  updateHeroSlide(heroCurrentIndex);
+  startHeroAutoSlide();
+}
+const popupOverlay = document.getElementById("popupFormOverlay");
+const popupCloseBtn = document.getElementById("popupFormClose");
+
+/* Show after 8 seconds */
+setTimeout(() => {
+  popupOverlay.classList.add("show");
+}, 8000);
+
+/* Close button */
+popupCloseBtn.addEventListener("click", () => {
+  popupOverlay.classList.remove("show");
+});
+
+/* Close on outside click */
+popupOverlay.addEventListener("click", (e) => {
+  if (e.target === popupOverlay) {
+    popupOverlay.classList.remove("show");
+  }
+});
+const popupForm = document.querySelector(".popupform-form-box");
+const popupBtn = document.querySelector(".popupform-submit");
+
+popupForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  popupBtn.innerText = "Submitting...";
+  popupBtn.disabled = true;
+
+  const eventType = document.querySelector('input[name="event"]:checked');
+
+  const data = {
+    name: popupForm.querySelector("#name").value,
+    email: popupForm.querySelector("#email").value,
+    phone: popupForm.querySelector("#phone").value,
+    event: eventType ? eventType.value : "",
+    date: popupForm.querySelector("#date").value,
+    location: popupForm.querySelector("#location").value,
+    message: popupForm.querySelector("#message").value,
+  };
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbwq0LhtkhHwpzntkPir8GKe3I47-QKlZq_PmyOOrtVbrKUzPcWhL931wpNFgeokMdqRKg/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      },
+    );
+
+    popupBtn.innerText = "Submitted ✓";
+    popupForm.reset();
+
+    setTimeout(() => location.reload(), 2000);
+  } catch (err) {
+    console.error(err);
+    popupBtn.innerText = "Error";
+    popupBtn.disabled = false;
+  }
+});
