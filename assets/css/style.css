@@ -2026,6 +2026,18 @@ circle {
   }
   .hero-text {
     margin-bottom: 20px;
+    text-align: center;
+  }
+  .hero-text h1,
+  .hero-text p {
+    text-align: center;
+  }
+  .hero {
+    height: 50vh;
+  }
+  .slide {
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 600px) {
