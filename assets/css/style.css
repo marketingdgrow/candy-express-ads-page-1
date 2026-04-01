@@ -189,6 +189,7 @@ nav a {
 .hero {
   height: 100vh;
   position: relative;
+  background-color: #fff;
 }
 .hero h1 {
   font-size: 32px;
@@ -217,6 +218,7 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #fff;
 }
 .hero-text {
   margin-bottom: 160px;
@@ -2047,13 +2049,15 @@ circle {
   }
   .hero {
     height: 30vh;
+    background-color: #fff;
   }
   .right-indicator {
     display: none;
   }
   .slide {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
 }
 @media (max-width: 600px) {
